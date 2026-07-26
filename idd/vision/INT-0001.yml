@@ -1,0 +1,19 @@
+uid: INT-0001
+type: intent
+status: draft
+title: Catch semantic and consistency defects that structural grounding cannot
+text: |-
+  throughline's `tl check` gate validates the STRUCTURE of a requirements graph
+  — that every non-root item reaches a root through a well-formed grounding edge,
+  forming an acyclic root-terminating DAG. It cannot, from the edge alone, judge
+  whether the graph is SEMANTICALLY sound — whether a parent actually entails its
+  child, entails it at the stated modal strength, or whether the prose of an item
+  is even consistent with the links the item declares. Those defects pass the gate
+  silently; human ratification is the only current guard, and it is fallible and
+  skipped for directly-authored human-origin items. throughline-challenger exists
+  to interrogate these semantic and textual-consistency properties and surface the
+  items that need a human to confirm or reject them — an automated challenge pass
+  layered on top of the structural gate, never a replacement for it.
+normative: true
+attrs:
+  origin: hybrid

@@ -1,0 +1,77 @@
+[project]
+name = "throughline-challenger"
+format_version = 3
+
+# Root item types may exist ungrounded; everything else must reach a root
+# through a grounding link (the scope-avalanche grounding layer). A non_goal is
+# a root but NOT a delivery root: it is negative space, so nothing derives from
+# it and it is never flagged 'unserved'.
+[grounding]
+root_types = ["intent", "business_need", "risk", "constraint", "assumption", "non_goal"]
+delivery_roots = ["intent", "business_need", "risk", "constraint"]
+ground_link_types = ["derives_from", "mitigates", "implements", "verifies"]
+ai_origins = ["ai", "hybrid"]
+
+[types.requirement]
+attrs.priority = { type = "enum", values = ["must", "should", "could"], normative = true }
+attrs.origin   = { type = "enum", values = ["human", "ai", "hybrid"] }
+
+[types.nfr]
+attrs.origin = { type = "enum", values = ["human", "ai", "hybrid"] }
+
+# A non_goal records deliberately-excluded scope — the object a human points at
+# to reject a category of proposed work. Passive by design: throughline surfaces
+# non_goals in `tl context` but never tries to detect items that 'violate' one.
+[types.non_goal]
+attrs.origin = { type = "enum", values = ["human", "ai", "hybrid"] }
+
+[links]
+types = ["refines", "verifies", "satisfies", "implements", "relates",
+         "derives_from", "mitigates", "assumes"]
+
+# Type-level link constraints (SR-0084): the item types each link may join.
+# Domain-specific, so left off by default — run `tl shape` to see how your
+# graph is actually wired, then declare rules to lock that shape in, e.g.:
+# [link_rules]
+# mitigates = { from = ["requirement"], to = ["risk"] }
+# verifies  = { from = ["test"], to = ["requirement"] }
+
+[status]
+# draft = specified and grounded, not yet signed off; deferred = acknowledged and
+# grounded but deliberately parked (a backlog wish-list item, not on the active
+# front). No separate 'approved' step — a draft is ratified directly.
+values = ["proposed", "draft", "deferred", "ratified", "implemented",
+          "verified", "suspect", "rejected", "deleted"]
+
+# Semantic status roles (SR-0131): which declared status plays each role the
+# tool's operations act on — `tl new` births at 'initial', `tl ratify` writes
+# 'ratified', `tl invalidate` writes 'invalidated' and reads 'invalidated' +
+# 'tombstone' as dead, `tl delete` writes 'tombstone'. Operations resolve status
+# through these roles, never a literal, so a project renames a status freely by
+# editing here. Delete this table only if you drive every status move by hand.
+[status.roles]
+initial = "draft"
+proposed = "proposed"
+ratified = "ratified"
+invalidated = "rejected"
+suspect = "suspect"
+tombstone = "deleted"
+
+# Allowed status moves (SR-0083). `tl check` compares each item against its
+# status in the previous commit and flags any change these do not permit. Delete
+# this table to leave every status freely reachable.
+[transitions]
+proposed    = ["draft", "ratified", "deferred", "rejected", "deleted"]
+draft       = ["ratified", "deferred", "rejected", "deleted"]
+deferred    = ["draft", "ratified", "rejected", "deleted"]
+ratified    = ["implemented", "deferred", "suspect", "rejected", "deleted"]
+implemented = ["verified", "suspect", "rejected", "deleted"]
+verified    = ["implemented", "suspect", "deleted"]
+suspect     = ["ratified", "implemented", "verified", "rejected", "deleted"]
+rejected    = ["draft", "deleted"]
+
+# Coverage: every live requirement should be verified by a test.
+[[rules.coverage]]
+filter = "type == 'requirement' and status != 'deleted'"
+needs = "incoming:verifies"
+severity = "warning"

@@ -1,0 +1,22 @@
+uid: REQ-0001
+type: requirement
+status: draft
+title: Interrogate semantic link strength between an item and its justification
+text: |-
+  The tool shall compare each item against the items it is grounded to (and, where
+  present, against any external standard clause it links with satisfies) and flag
+  where the modal strength of the child exceeds or falls short of what its
+  justification actually demands — for example a child that says MUST/every/always
+  where the parent grants only MAY/can/able-to (a capability), or a parent that
+  claims a blanket property no child realises and no linked standard requires. The
+  challenge cuts both directions — a node can over-claim relative to its
+  descendants AND relative to a standard it adopts by reference — so the tool
+  compares a node against both. Flagged items are surfaced for a human to confirm,
+  rescope, or reject; the tool never rewrites the graph itself.
+normative: true
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  origin: hybrid
+  priority: should

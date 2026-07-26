@@ -1,0 +1,30 @@
+uid: REQ-0002
+type: requirement
+status: draft
+title: Flag prose UID mentions that lack a corresponding link edge
+text: |-
+  The tool shall scan every item's free-text fields (text, rationale) for
+  UID-shaped tokens — both bare local UIDs (e.g. SR-0004) and namespaced composed
+  references (e.g. asvs:SR-0194) — and flag any token that names a real item yet
+  has no corresponding entry in that item's links block. Such a token is a
+  dangling textual cross-reference — the prose asserts a dependency the graph
+  never records, so `tl check` (which inspects only the grounding edge, never the
+  prose) passes it silently. For each finding the tool reports the citing item,
+  the cited UID, and the sentence, so a human can either formalise the reference
+  (add the appropriate relates or grounding edge) or reword the prose. This is a
+  cheap, deterministic structural-vs-textual consistency lint — it needs no
+  semantic-entailment reasoning and can ship ahead of the modal-strength engine
+  (REQ-0001).
+rationale: |-
+  Discovered 2026-07-26 in the orcid-mcp graph — SR-0004 (Least-privilege ORCID
+  scopes) named NG-0004 and SR-0023 by UID in its text while its links block
+  carried none of them; `tl-compose check` was green throughout. The missing edges
+  were added by hand, but only because a human happened to read the prose. This
+  requirement is the tool automating that catch.
+normative: true
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  origin: hybrid
+  priority: should
