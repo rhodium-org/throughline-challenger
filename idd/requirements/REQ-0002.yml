@@ -1,6 +1,6 @@
 uid: REQ-0002
 type: requirement
-status: draft
+status: ratified
 title: Flag prose UID mentions that lack a corresponding link edge
 text: |-
   The tool shall scan every item's free-text fields (text, rationale) for
@@ -28,3 +28,4 @@ links:
 attrs:
   origin: hybrid
   priority: should
+  ratified_by: henry

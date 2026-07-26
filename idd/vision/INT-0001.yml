@@ -1,6 +1,6 @@
 uid: INT-0001
 type: intent
-status: draft
+status: ratified
 title: Catch semantic and consistency defects that structural grounding cannot
 text: |-
   throughline's `tl check` gate validates the STRUCTURE of a requirements graph
@@ -17,3 +17,4 @@ text: |-
 normative: true
 attrs:
   origin: hybrid
+  ratified_by: henry

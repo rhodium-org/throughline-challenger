@@ -1,6 +1,6 @@
 uid: REQ-0001
 type: requirement
-status: draft
+status: ratified
 title: Interrogate semantic link strength between an item and its justification
 text: |-
   The tool shall compare each item against the items it is grounded to (and, where
@@ -20,3 +20,4 @@ links:
 attrs:
   origin: hybrid
   priority: should
+  ratified_by: henry
