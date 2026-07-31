@@ -21,3 +21,5 @@ attrs:
   origin: hybrid
   priority: should
   ratified_by: henry
+  ratified_fingerprint: sha256:1656612b30e1be1dbb1579130bfb00035dd4098cb38aa289ef89fef5b4368c6a
+  ratified_backfilled: true
