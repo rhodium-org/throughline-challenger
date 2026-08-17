@@ -61,9 +61,24 @@ tombstone = "deleted"
 # status in the previous commit and flags any change these do not permit. Delete
 # this table to leave every status freely reachable.
 [transitions]
-proposed    = ["draft", "ratified", "deferred", "rejected", "deleted"]
-draft       = ["ratified", "deferred", "rejected", "deleted"]
-deferred    = ["draft", "ratified", "rejected", "deleted"]
+# `tl migrate` added the move to 'suspect' (SR-0188): this lifecycle gave
+# 'proposed' no route to it, so an item resting in 'proposed' could never be
+# marked suspect and invalidating anything it grounds in would have left it
+# unflagged. Narrow it back deliberately with `tl schema transition deny
+# proposed suspect`.
+proposed    = ["draft", "ratified", "deferred", "rejected", "deleted",
+               "suspect"]
+# `tl migrate` added the move to 'suspect' (SR-0188): this lifecycle gave
+# 'draft' no route to it, so an item resting in 'draft' could never be marked
+# suspect and invalidating anything it grounds in would have left it unflagged.
+# Narrow it back deliberately with `tl schema transition deny draft suspect`.
+draft       = ["ratified", "deferred", "rejected", "deleted", "suspect"]
+# `tl migrate` added the move to 'suspect' (SR-0188): this lifecycle gave
+# 'deferred' no route to it, so an item resting in 'deferred' could never be
+# marked suspect and invalidating anything it grounds in would have left it
+# unflagged. Narrow it back deliberately with `tl schema transition deny
+# deferred suspect`.
+deferred    = ["draft", "ratified", "rejected", "deleted", "suspect"]
 ratified    = ["implemented", "deferred", "suspect", "rejected", "deleted"]
 implemented = ["verified", "suspect", "rejected", "deleted"]
 verified    = ["implemented", "suspect", "deleted"]
