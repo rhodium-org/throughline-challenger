@@ -1,0 +1,19 @@
+uid: REQ-0007
+type: requirement
+status: proposed
+title: Flag requirements that do not say what failure looks like
+text: |-
+  The tool shall flag requirements stating only the behaviour wanted, with no clause
+  saying which outcome would violate them. A requirement with no negative case gives a
+  test author nothing to assert against, and is the shape that most often reaches
+  implementation with each side reading it differently.
+
+  The signal is weak on its own and will flag items that are fine, so it belongs in a
+  review ordering rather than in a gate.
+normative: true
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  priority: should
+  origin: ai

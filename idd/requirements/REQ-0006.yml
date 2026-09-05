@@ -1,0 +1,21 @@
+uid: REQ-0006
+type: requirement
+status: proposed
+title: Ask whether an item's rationale justifies less than its siblings require
+text: |-
+  The tool shall surface, for a human to answer, whether an implementation satisfying
+  an item and the reason given for it would break a requirement grounded to the same
+  parent. A rationale narrower than the family it belongs to is not false and no
+  structural check can see it, so the tool asks the question rather than deciding it.
+
+  Observed in the silicon-exchange graph: SR-0039 asks for filter state in the query
+  string so a reader can copy the address and send someone the same view. Replacing
+  the history entry satisfies that completely and breaks SR-0040, which needs the
+  entry pushed.
+normative: true
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  priority: should
+  origin: ai

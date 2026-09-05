@@ -1,0 +1,24 @@
+uid: REQ-0004
+type: requirement
+status: proposed
+title: Report how each branch of the graph is verified, and flag branches with no
+  automated check
+text: |-
+  Where a project declares how each requirement is to be verified, the tool shall
+  report that distribution across each grounding branch rather than per item, and flag
+  a branch whose requirements are all settled by human inspection. It shall also flag a
+  branch whose automated checks all sit on one kind of requirement while another kind
+  goes unchecked, which a per-item coverage rule cannot see because the branch looks
+  covered.
+
+  Observed in the silicon-exchange graph: every requirement that failed acceptance sat
+  in a branch whose tests did not touch it, and three of five sat in branches with no
+  automated test at all. UR-0001 carried five tests, all on filtering and sorting
+  logic, and none on the two requirements about browser behaviour.
+normative: true
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  priority: should
+  origin: ai

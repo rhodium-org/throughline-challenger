@@ -1,0 +1,25 @@
+uid: REQ-0003
+type: requirement
+status: proposed
+title: Flag sibling requirements that quantify over the same things by different
+  names
+text: |-
+  The tool shall compare requirements grounded to the same parent and flag where one
+  enumerates a set of things and another quantifies over a narrower or differently
+  named class of the same things, particularly where other items in the graph make
+  those names distinct types. An implementer reading the narrower item is reading it
+  correctly, so the defect is invisible to review of either item alone and appears
+  only when both are held together.
+
+  Observed in the silicon-exchange graph: SR-0039 enumerates search, filter and sort,
+  SR-0040 says only 'a filter', and SR-0036 and SR-0037 make search and filter
+  separate requirements. Eleven of that campaign's twenty-two acceptance failures were
+  the back button not restoring a search, in every arm that read the graph and in
+  neither arm that read the same content as prose.
+normative: true
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  priority: should
+  origin: ai

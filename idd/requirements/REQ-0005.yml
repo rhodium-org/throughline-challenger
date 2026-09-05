@@ -1,0 +1,22 @@
+uid: REQ-0005
+type: requirement
+status: proposed
+title: Flag requirements whose violation no automated check could detect as written
+text: |-
+  The tool shall flag requirements whose predicate is stated in terms that no
+  observation of the running system could settle, such as an appearance being designed
+  rather than derived, a colour used sparingly, or text being legible. Such a
+  requirement is not wrong, but it cannot yield a test, so it needs either a
+  restatement in measurable terms or a written procedure for the human who settles it.
+
+  Observed in the silicon-exchange graph: SR-0058 requires a light appearance and a
+  dark appearance, both designed rather than one being an inversion of the other.
+  Nothing verified it, and runs that render dark whatever they are asked scored as
+  passing.
+normative: true
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  priority: should
+  origin: ai
