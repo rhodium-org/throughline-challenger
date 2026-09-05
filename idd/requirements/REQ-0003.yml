@@ -1,6 +1,6 @@
 uid: REQ-0003
 type: requirement
-status: proposed
+status: ratified
 title: Flag sibling requirements that quantify over the same things by different
   names
 text: |-
@@ -23,3 +23,5 @@ links:
 attrs:
   priority: should
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:980a8dda08038470701495dce08c1e22e1ce617ca497b514f3225ebd6418087c

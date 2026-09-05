@@ -1,6 +1,6 @@
 uid: REQ-0006
 type: requirement
-status: proposed
+status: ratified
 title: Ask whether an item's rationale justifies less than its siblings require
 text: |-
   The tool shall surface, for a human to answer, whether an implementation satisfying
@@ -19,3 +19,5 @@ links:
 attrs:
   priority: should
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:02f5946b163f85797c35f5904856f31f1d89738f4d6d1e8dfa2857a233c79a23

@@ -1,6 +1,6 @@
 uid: REQ-0007
 type: requirement
-status: proposed
+status: ratified
 title: Flag requirements that do not say what failure looks like
 text: |-
   The tool shall flag requirements stating only the behaviour wanted, with no clause
@@ -17,3 +17,5 @@ links:
 attrs:
   priority: should
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:3d9d7eea1395790978ad515a744b68a1dd95b1705de265f8bee5a1c2079155f7

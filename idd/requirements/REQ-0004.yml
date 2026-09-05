@@ -1,6 +1,6 @@
 uid: REQ-0004
 type: requirement
-status: proposed
+status: ratified
 title: Report how each branch of the graph is verified, and flag branches with no
   automated check
 text: |-
@@ -22,3 +22,5 @@ links:
 attrs:
   priority: should
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:a84576c0b29ffb8374755bed9d8523524f6562dcfc7f757ac05f0bf80343f339

@@ -1,6 +1,6 @@
 uid: REQ-0005
 type: requirement
-status: proposed
+status: ratified
 title: Flag requirements whose violation no automated check could detect as written
 text: |-
   The tool shall flag requirements whose predicate is stated in terms that no
@@ -20,3 +20,5 @@ links:
 attrs:
   priority: should
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:2c0215b9f6bfab829baf1661c77956adc631a01209b403c777d7c6c2e11cb2ff
