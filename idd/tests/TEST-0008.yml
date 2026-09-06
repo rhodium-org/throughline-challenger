@@ -1,0 +1,17 @@
+uid: TEST-0008
+type: test
+status: proposed
+title: A requirement with no failure case is flagged low in a review ordering, never
+  in a gate
+text: 'Given a requirement that states only the behaviour wanted, with no clause
+  saying which outcome would violate it, it appears in the review ordering marked
+  as lacking a negative case. Given a requirement carrying a clause of the form ''and
+  not'', ''never'', ''refuses'' or an explicit violating outcome, it does not. The
+  signal changes the ordering only: no run of the tool exits non-zero on it, and
+  it is absent from any output the tool offers as a gate.'
+normative: true
+links:
+- target: REQ-0007
+  type: verifies
+attrs:
+  origin: ai

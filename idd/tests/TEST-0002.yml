@@ -1,0 +1,19 @@
+uid: TEST-0002
+type: test
+status: proposed
+title: A child stronger than its justification is flagged, in both directions, and
+  a matching pair is not
+text: Given a parent granting a capability (may, can, able to) and a child requiring
+  it always (must, every, always), the child is flagged against the parent. Given
+  a child whose satisfies link names a standard clause that only permits what the
+  child mandates, the child is flagged against the clause. Given a parent claiming
+  a blanket property that no child realises and no linked clause requires, the parent
+  is flagged. Given a parent and child whose modal strengths match, nothing is flagged.
+  Every flag is a question naming both items and the two strengths, and the graph
+  on disk is byte for byte unchanged after the run.
+normative: true
+links:
+- target: REQ-0001
+  type: verifies
+attrs:
+  origin: ai

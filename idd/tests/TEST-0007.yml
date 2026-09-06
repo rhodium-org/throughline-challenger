@@ -1,0 +1,17 @@
+uid: TEST-0007
+type: test
+status: proposed
+title: A rationale that a sibling would contradict is put as a question, and one
+  that no sibling contradicts is not
+text: Given two requirements grounded to the same parent, where an implementation
+  that satisfies the first exactly as its rationale describes would violate the second,
+  the tool asks whether the first's rationale justifies less than its family requires,
+  naming both items and the way the second would break. Given siblings whose rationales
+  are consistent with one another, nothing is asked. The output is a question with
+  the two answers open; the tool records no verdict of its own and changes no item.
+normative: true
+links:
+- target: REQ-0006
+  type: verifies
+attrs:
+  origin: ai

@@ -1,0 +1,18 @@
+uid: TEST-0004
+type: test
+status: proposed
+title: Siblings that name the same things differently are flagged only when held
+  together
+text: Given two requirements grounded to the same parent, one enumerating a set of
+  things and the other quantifying over a narrower or differently named class of
+  the same things, the pair is flagged together and neither is flagged alone. Given
+  that other items in the graph make those names distinct types, the flag says so.
+  Given siblings that quantify over the same things by the same names, nothing is
+  flagged. Given the same two requirements grounded to different parents, nothing
+  is flagged by this challenge.
+normative: true
+links:
+- target: REQ-0003
+  type: verifies
+attrs:
+  origin: ai

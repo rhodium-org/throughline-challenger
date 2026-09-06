@@ -1,0 +1,18 @@
+uid: TEST-0006
+type: test
+status: proposed
+title: A requirement whose violation no observation could settle is flagged; one
+  stated in measurable terms is not
+text: Given a requirement whose predicate is a judgement no observation of the running
+  system settles, such as an appearance being designed rather than derived or a colour
+  used sparingly, it is flagged with the phrase that makes it so. Given a requirement
+  stated in terms an observation settles, such as a contrast ratio or a response
+  within a bound, nothing is flagged. Given a flagged requirement that carries a
+  written procedure for the human who settles it, the flag says the procedure exists
+  and asks only whether it is enough. The tool proposes no restatement.
+normative: true
+links:
+- target: REQ-0005
+  type: verifies
+attrs:
+  origin: ai
