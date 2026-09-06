@@ -1,6 +1,6 @@
 uid: TEST-0004
 type: test
-status: proposed
+status: ratified
 title: Siblings that name the same things differently are flagged only when held
   together
 text: Given two requirements grounded to the same parent, one enumerating a set of
@@ -16,3 +16,5 @@ links:
   type: verifies
 attrs:
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:e4a8295f440bea6f38b5d83416b6e6b5ca095452536ae624eb3bae41d68523bf

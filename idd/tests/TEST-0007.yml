@@ -1,6 +1,6 @@
 uid: TEST-0007
 type: test
-status: proposed
+status: ratified
 title: A rationale that a sibling would contradict is put as a question, and one
   that no sibling contradicts is not
 text: Given two requirements grounded to the same parent, where an implementation
@@ -15,3 +15,5 @@ links:
   type: verifies
 attrs:
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:9de8d4462c7054c216ac8bb2a701702c657e2c5ca1ce760adf16b05ab62f33ba

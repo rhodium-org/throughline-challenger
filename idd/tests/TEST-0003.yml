@@ -1,6 +1,6 @@
 uid: TEST-0003
 type: test
-status: proposed
+status: ratified
 title: A UID in prose with no matching edge is flagged with its sentence; one with
   an edge, and a token that names no item, are not
 text: Given an item whose text names a real local item by UID with no entry for it
@@ -16,3 +16,5 @@ links:
   type: verifies
 attrs:
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:0673f8076f6eb012152c020d3b11519e5f7be6a08d45201b1b81cc21e36a3d1a

@@ -1,6 +1,6 @@
 uid: TEST-0002
 type: test
-status: proposed
+status: ratified
 title: A child stronger than its justification is flagged, in both directions, and
   a matching pair is not
 text: Given a parent granting a capability (may, can, able to) and a child requiring
@@ -17,3 +17,5 @@ links:
   type: verifies
 attrs:
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:9702030459ffc0e41e175a5dc139fd31c0db0480be5d8ba7a9e49415de9a21e0

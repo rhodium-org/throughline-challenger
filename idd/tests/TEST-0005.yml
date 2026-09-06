@@ -1,6 +1,6 @@
 uid: TEST-0005
 type: test
-status: proposed
+status: ratified
 title: Verification is reported per branch, and a branch settled only by inspection
   or checked on one kind alone is flagged
 text: Given a project declaring how each requirement is verified, the report groups
@@ -16,3 +16,5 @@ links:
   type: verifies
 attrs:
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:99c59f91fe7da1e074ed70fa05f7a426a35bd73c7016a2a010bcf319c501d9dc

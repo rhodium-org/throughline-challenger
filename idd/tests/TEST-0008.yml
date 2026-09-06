@@ -1,6 +1,6 @@
 uid: TEST-0008
 type: test
-status: proposed
+status: ratified
 title: A requirement with no failure case is flagged low in a review ordering, never
   in a gate
 text: 'Given a requirement that states only the behaviour wanted, with no clause
@@ -15,3 +15,5 @@ links:
   type: verifies
 attrs:
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:1dc8874cc3537a8303080add0e6a45d248ff34d16ff329e51dc189d1ab0afbdd
