@@ -1,6 +1,6 @@
 uid: TEST-0001
 type: test
-status: proposed
+status: ratified
 title: A live item carrying a replacement-meaning link is challenged; a retired one,
   and one carrying a weaker link, are not
 text: 'Given a graph declaring a link type whose recorded meaning is replacement,
@@ -17,3 +17,5 @@ links:
   type: verifies
 attrs:
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:c855feeae9a1a7a995c9c73c4f83e2626bcb17836abc3b6405d4a3ff2f7cd818

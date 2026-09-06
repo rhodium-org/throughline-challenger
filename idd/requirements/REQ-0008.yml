@@ -1,6 +1,6 @@
 uid: REQ-0008
 type: requirement
-status: proposed
+status: ratified
 title: Ask whether an item that points at its own replacement should still be live
 text: 'The tool shall read what a graph''s link types mean, not only what they are
   called, and treat any link whose meaning is that the target stands in for, replaces,
@@ -39,3 +39,5 @@ links:
 attrs:
   priority: should
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:a2e18725e8661d234f39e290cfafaf372ce65b2bd3adcdfcf0f3f283cc5b12cf
