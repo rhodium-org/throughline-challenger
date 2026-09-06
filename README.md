@@ -21,6 +21,14 @@ root-terminating DAG. It cannot, from the edge alone, judge whether the graph is
   edge. `tl check` inspects only the grounding edge, never the prose, so the
   dangling cross-reference is invisible to it.
 
+- **Replacement-without-retirement** — a link whose *meaning* is that the target
+  replaces, retires or makes irrelevant the source (`superseded_by`,
+  `replaced_by`, `made_irrelevant_by`, or whatever a graph calls it) is a claim
+  that the source's life is over. `tl check` sees a well-formed edge and stops.
+  The challenge reads the link type's recorded meaning, never its name, and
+  asks: retire the source, or is the link wrong? Observed in throughline-editor
+  (SR-0007, SR-0035: superseded for weeks, still ratified, still counted).
+
 Human ratification is the only current guard against these, and it is fallible.
 throughline-challenger automates the challenge pass — it never rewrites the graph
 itself; it flags items for a human to confirm, rescope, or reject.

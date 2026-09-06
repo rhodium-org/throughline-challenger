@@ -1,0 +1,19 @@
+uid: TEST-0001
+type: test
+status: proposed
+title: A live item carrying a replacement-meaning link is challenged; a retired one,
+  and one carrying a weaker link, are not
+text: 'Given a graph declaring a link type whose recorded meaning is replacement,
+  under any name: an item in a live status carrying that link is surfaced as a question
+  naming both ends and the two answers, retire the source or withdraw the link. The
+  same item in the graph''s tombstone or rejected status is not surfaced. An item
+  carrying a link whose recorded meaning is refinement or relation is not surfaced
+  whatever the type is called. A retired item whose replacement is itself not live
+  is surfaced. A graph whose link type has no recorded meaning is asked for one before
+  anything is judged, and the answer is recorded so it is not asked again.'
+normative: true
+links:
+- target: REQ-0008
+  type: verifies
+attrs:
+  origin: ai

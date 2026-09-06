@@ -90,3 +90,9 @@ rejected    = ["draft", "deleted"]
 filter = "type == 'requirement' and status != 'deleted'"
 needs = "incoming:verifies"
 severity = "warning"
+
+# The tests register has existed since the graph was bootstrapped with no type
+# to put in it; REQ-0008 is the first challenge that arrives with its test
+[types.test]
+# Every other type records who wrote it
+attrs.origin = { type = "enum", values = ["human", "ai", "hybrid"] }

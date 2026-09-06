@@ -1,0 +1,41 @@
+uid: REQ-0008
+type: requirement
+status: proposed
+title: Ask whether an item that points at its own replacement should still be live
+text: 'The tool shall read what a graph''s link types mean, not only what they are
+  called, and treat any link whose meaning is that the target stands in for, replaces,
+  retires or makes irrelevant the source — superseded_by, replaced_by, obsoleted_by,
+  made_irrelevant_by, deprecated_by, or whatever the graph names it — as a claim
+  that the source''s life is over. Where such a link leaves an item that is still
+  live, in any status the graph does not bind to a tombstone, rejection or retirement,
+  the tool shall put the question to a human rather than decide it: retire the source,
+  or the link is wrong and the target does not replace it after all. The meaning
+  of a link type is taken from the graph''s own declaration where it states one,
+  and otherwise asked once of the maintainer and recorded beside the type; it is
+  never inferred from the name alone, because a graph may call the relation anything
+  and two graphs may use one name for two meanings. The tool shall not flag an item
+  whose link means something weaker, such as refines or relates, however its name
+  reads, and shall flag the mirror case too: a retired item whose replacement is
+  itself not live, which leaves the reader with nothing to follow. Observed in throughline-editor
+  on 6 September 2026: SR-0007 and SR-0035 carried superseded_by links to their successors
+  for weeks while still ratified, and were counted in every export, in the published
+  specification and in the citation-coverage gate; tl check was silent throughout,
+  because the links were well-formed.'
+rationale: 'This is one instance of a family the challenger should own: a link whose
+  meaning entails a status at one of its ends. Supersession entails the source retired;
+  a verifying test entails the target may be marked verified only while the test
+  stands; an implements link from an item that is itself rejected entails nothing
+  and should not count. tl check proves the edge is well-formed and stops there,
+  which is right for the core and exactly the gap this tool is for. The requirement
+  is written against the meaning rather than the name so that the check survives
+  a graph that says replaced_by, one that says made_irrelevant_by, and one whose
+  superseded_by turns out to mean something else. Rejected: a fixed list of link-type
+  names, which would flag nothing in a graph that chose a different word and flag
+  wrongly in one that reused a familiar word for a different relation.'
+normative: true
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  priority: should
+  origin: ai
