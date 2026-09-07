@@ -1,0 +1,17 @@
+uid: TEST-0009
+type: test
+status: proposed
+title: A universal parent with one narrow child is flagged; one whose children name
+  several mechanisms is not
+text: |-
+  A parent whose text says a property holds always, with a single child addressing
+  one mechanism, is flagged, and the report shows the parent's claim beside that
+  child's subject. A parent with the same universal language whose children name
+  several distinct mechanisms is not flagged. A parent with no universal language is
+  not flagged however few children it has.
+normative: true
+links:
+- target: REQ-0009
+  type: verifies
+attrs:
+  origin: ai

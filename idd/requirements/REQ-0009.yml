@@ -1,0 +1,33 @@
+uid: REQ-0009
+type: requirement
+status: proposed
+title: Flag a property stated with universal force that only one child instantiates
+text: |-
+  The tool shall flag an item whose language is universal — always, every, never,
+  no ... at all — where the items grounded to it all address a single mechanism, and
+  shall report the parent's claim beside the subjects its children actually name so
+  a human can say which mechanisms are unnamed. A parent with universal language and
+  exactly one child is the strongest case.
+
+  Every gate passes in this shape. The parent has a child, the child has a test, the
+  branch reports as covered, and the property is unguarded everywhere the named
+  mechanism is not. Interrogating link strength does not reach it either, because
+  that challenge looks for a property no child realises, and here one child realises
+  it for one instance; partial realisation reads as full coverage.
+
+  How many mechanisms a property admits cannot be computed, so the tool asks rather
+  than judges, as it does for a rationale narrower than its family.
+
+  Observed twice in the silicon-exchange graph, in both of the behavioural defects
+  that campaign found. NFR-0009 says the same input always renders the same output;
+  its text names unseeded randomness and its one child bans a random call in the
+  sample generator; a component reading the clock while rendering broke the property
+  and violated no requirement. SR-0040 said 'a filter' where SR-0039 enumerated
+  search, filter and sort.
+normative: true
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  priority: should
+  origin: ai
