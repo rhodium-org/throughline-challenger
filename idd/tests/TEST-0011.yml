@@ -1,0 +1,16 @@
+uid: TEST-0011
+type: test
+status: proposed
+title: A source item nothing local implements is listed; one with a local implementer
+  is not
+text: In a consumer graph pinned to a source, name one type and one link type. A
+  borrowed item of that type with no incoming local link of that link type is listed.
+  A borrowed item with one such link is not. A borrowed item of another type is not
+  listed however many links it lacks. A borrowed item linked only by a local non-goal
+  with relates is not listed when relates is among the link types named.
+normative: true
+links:
+- target: REQ-0011
+  type: verifies
+attrs:
+  origin: ai

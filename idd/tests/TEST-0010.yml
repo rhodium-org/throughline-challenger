@@ -1,0 +1,14 @@
+uid: TEST-0010
+type: test
+status: proposed
+title: An unstamped link into a source is listed; a stamped one is not
+text: In a consumer graph that composes a source, link one local item to a source
+  item without a stamp and a second local item to a source item with a stamp. The
+  tool lists the first link and not the second. A link between two local items is
+  never listed, stamped or not.
+normative: true
+links:
+- target: REQ-0010
+  type: verifies
+attrs:
+  origin: ai

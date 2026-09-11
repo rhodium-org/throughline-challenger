@@ -1,0 +1,16 @@
+uid: TEST-0012
+type: test
+status: proposed
+title: A moved target is shown in both editions and the refresh leaves one link
+text: Pin a consumer graph to an older tag of a source, stamp a link to a source
+  item, then repin to a tag where that item's text changed. The tool shows the local
+  item with the target's stamped text beside its current text and asks whether the
+  item still holds. After the refresh the link exists once, with the new stamp, and
+  the composed check is clean. Repinning to a tag where the target did not change
+  shows nothing.
+normative: true
+links:
+- target: REQ-0012
+  type: verifies
+attrs:
+  origin: ai

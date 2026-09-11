@@ -1,0 +1,28 @@
+uid: REQ-0012
+type: requirement
+status: proposed
+title: Put the question when a stamped link's target has changed
+text: 'Where a stamped link''s target has changed since the stamp was taken, the
+  tool shall show the local item, the target as it was when stamped and as it now
+  stands, and ask the human which of two things is true: the item still holds against
+  the new wording, or it does not. The tool shall not decide. If the item still holds,
+  the stamp is refreshed and the reason is recorded in the item''s rationale. If
+  it does not, the item is moved to the graph''s suspect status, amended, and re-verified
+  by the tests its verifies links name before the stamp is refreshed. A stamp is
+  refreshed by removing the link and adding it again with a new stamp, never by adding
+  a second link beside the first.'
+rationale: 'tl-compose check raises suspect-link when a stamped target moves and
+  stops there, which is right for the gate. The challenger owns the triage: the two
+  editions of the target side by side, and the question. This is another member of
+  the family named under REQ-0008, a link whose meaning entails a status at one end:
+  a stamped link whose target moved entails that the source is suspect until a human
+  says otherwise. On 9 September 2026 running link with a stamp a second time was
+  observed to add a second edge and leave the stale finding in place, which is why
+  the refresh is remove-then-add.'
+normative: true
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  priority: should
+  origin: ai

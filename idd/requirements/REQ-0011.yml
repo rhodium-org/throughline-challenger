@@ -1,0 +1,25 @@
+uid: REQ-0011
+type: requirement
+status: proposed
+title: Flag a borrowed item of an implementable type that nothing local implements
+text: 'Where a graph composes a specification, the tool shall list every borrowed
+  item of the types the maintainer names as needing an implementer that has no incoming
+  link, of the link types the maintainer names, from a local item. Each such item
+  is a part of the specification the implementation is silent on. The tool asks the
+  human to choose: add a local item that implements it, or record a non-goal that
+  relates to it and says why it is out of scope. Silence is neither.'
+rationale: 'A consumer''s check proves that every local item is grounded. It never
+  asks whether the specification is covered, because a borrowed item needs no grounding
+  in the consumer. So when a specification cuts an edition that adds items, the consumer''s
+  check stays green with the new items unimplemented. The types and link types are
+  named by the maintainer rather than fixed by the tool, because one graph implements
+  system requirements with implements and another meets clauses with satisfies. Rejected:
+  inferring the implementable types from the source''s delivery roots, which would
+  list intents and constraints nobody implements.'
+normative: true
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  priority: should
+  origin: ai

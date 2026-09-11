@@ -1,0 +1,26 @@
+uid: REQ-0010
+type: requirement
+status: proposed
+title: Flag a link into a composed source that carries no stamp
+text: Where a graph composes another graph as a source, the tool shall list every
+  link from a local item into that source that carries no stamp of the target's fingerprint.
+  A link without a stamp cannot tell when its target changes, so a moved source leaves
+  the local item looking current. For each finding the tool reports the local item,
+  the target and the link type, so a human can stamp the link or decide that the
+  link does not depend on the target's wording. Confirming a link records what was
+  read; a stamp is that record.
+rationale: 'A link into a specification is a claim that the local item was checked
+  against the target as it stood. Without a stamp the claim has no date and no content,
+  and tl-compose check cannot raise suspect-link on it when the target moves. Seen
+  on the crookham-park-parking implementation graph in September 2026: links into
+  the register had been made before stamps were used, and a repin to a new register
+  edition changed nothing. This is the first of three requirements that move the
+  implementation-against-moved-specification pass into the challenger, where the
+  throughline-challenge skill had been carrying it alone.'
+normative: true
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  priority: should
+  origin: ai
