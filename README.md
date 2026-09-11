@@ -37,4 +37,7 @@ itself; it flags items for a human to confirm, rescope, or reject.
 
 Design stage. The requirements graph lives under `idd/` (bare `tl`, no composed
 sources yet). Run `tl -C idd context` for the agent brief and `tl -C idd check`
-to validate. No implementation yet.
+to validate. No automated implementation yet. A hand-run form of the challenge
+pass ships as the `throughline-challenge` Claude Code skill in
+[rhodium-org/throughline-skills](https://github.com/rhodium-org/throughline-skills);
+that skill's own graph composes this one and cites each challenge it performs.
