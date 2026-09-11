@@ -3,13 +3,13 @@ type: test
 status: ratified
 title: A UID in prose with no matching edge is flagged with its sentence; one with
   an edge, and a token that names no item, are not
-text: Given an item whose text names a real local item by UID with no entry for it
-  in the item's links, the tool reports the citing item, the cited UID and the sentence.
-  The same for a namespaced reference to a real composed clause. Given the same mention
-  where a link to that UID exists of any type, nothing is reported. Given a UID-shaped
-  token that names no item in the graph or its sources, nothing is reported. The
-  rationale field is scanned as the text field is. The check runs with no semantic
-  engine present.
+text: |-
+  Given an item whose text names a real local item by UID with no entry for it in the item's links, the tool reports the citing item, the cited UID and the sentence. The same for a namespaced reference to a real composed clause. Given the same mention where a link to that UID exists of any type, nothing is reported. Given a UID-shaped token that names no item in the graph or its sources, nothing is reported. The rationale field is scanned as the text field is. The check runs with no semantic engine present.
+
+  Given an item whose text names a file whose name contains a real item's UID, such
+  as tests/TEST-0001.test.ts, with no link to that item, the tool reports it as a
+  path mention and not as a citation. Given the same file name where a link to that
+  item exists, nothing is reported.
 normative: true
 links:
 - target: REQ-0002

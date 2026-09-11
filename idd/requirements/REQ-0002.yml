@@ -20,6 +20,12 @@ text: |-
   that item's own namespace, not a local item that happens to share the UID, and
   the tool resolves it there. A finding on a borrowed item belongs to the source's
   owner, so the tool offers a mode that reports local items only.
+
+  A UID-shaped token that is part of a file path, preceded by a path separator or
+  followed by a file extension, names a file rather than citing an item. The tool
+  reports such a token apart from citations, as a path mention, with the same
+  detail, and does not count it as a dangling citation. The human decides whether
+  a shared file is a relationship worth an edge; the tool does not.
 rationale: |-
   Discovered 2026-07-26 in the orcid-mcp graph — SR-0004 (Least-privilege ORCID
   scopes) named NG-0004 and SR-0023 by UID in its text while its links block
