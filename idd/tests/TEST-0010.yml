@@ -1,6 +1,6 @@
 uid: TEST-0010
 type: test
-status: proposed
+status: ratified
 title: An unstamped link into a source is listed; a stamped one is not
 text: In a consumer graph that composes a source, link one local item to a source
   item without a stamp and a second local item to a source item with a stamp. The
@@ -12,3 +12,5 @@ links:
   type: verifies
 attrs:
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:a9904721d44aac197717c0103c1c374162f83d9d32ea08f65d840295430a59ac

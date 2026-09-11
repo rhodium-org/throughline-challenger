@@ -1,6 +1,6 @@
 uid: TEST-0012
 type: test
-status: proposed
+status: ratified
 title: A moved target is shown in both editions and the refresh leaves one link
 text: Pin a consumer graph to an older tag of a source, stamp a link to a source
   item, then repin to a tag where that item's text changed. The tool shows the local
@@ -14,3 +14,5 @@ links:
   type: verifies
 attrs:
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:6708cb4635c48b2e427bd48b778988aa50bba3a3f0b914d0bf1ff5e778121e06

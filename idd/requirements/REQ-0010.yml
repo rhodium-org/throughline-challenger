@@ -1,6 +1,6 @@
 uid: REQ-0010
 type: requirement
-status: proposed
+status: ratified
 title: Flag a link into a composed source that carries no stamp
 text: Where a graph composes another graph as a source, the tool shall list every
   link from a local item into that source that carries no stamp of the target's fingerprint.
@@ -24,3 +24,5 @@ links:
 attrs:
   priority: should
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:c69fb8f08d4c41fd4b3f6945843f454bbf8575b2895ddd47ef93e639329892d4

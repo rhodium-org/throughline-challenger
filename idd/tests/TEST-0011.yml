@@ -1,6 +1,6 @@
 uid: TEST-0011
 type: test
-status: proposed
+status: ratified
 title: A source item nothing local implements is listed; one with a local implementer
   is not
 text: In a consumer graph pinned to a source, name one type and one link type. A
@@ -14,3 +14,5 @@ links:
   type: verifies
 attrs:
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:3df84f01144e141bdb83f1c4ef6cfee0c4532534ea6501e14dbb05a2bafe7efa

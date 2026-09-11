@@ -1,6 +1,6 @@
 uid: REQ-0011
 type: requirement
-status: proposed
+status: ratified
 title: Flag a borrowed item of an implementable type that nothing local implements
 text: 'Where a graph composes a specification, the tool shall list every borrowed
   item of the types the maintainer names as needing an implementer that has no incoming
@@ -23,3 +23,5 @@ links:
 attrs:
   priority: should
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:ad8632cd982da08b3f54a11ff71e1491846bd9555a8c87ee69420957344932dc

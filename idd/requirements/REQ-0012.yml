@@ -1,6 +1,6 @@
 uid: REQ-0012
 type: requirement
-status: proposed
+status: ratified
 title: Put the question when a stamped link's target has changed
 text: 'Where a stamped link''s target has changed since the stamp was taken, the
   tool shall show the local item, the target as it was when stamped and as it now
@@ -26,3 +26,5 @@ links:
 attrs:
   priority: should
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:65c17544a205b4275650d6e902d991d28518cb16ff779031a3607ae19f895a0b
