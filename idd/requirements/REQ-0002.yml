@@ -15,6 +15,11 @@ text: |-
   cheap, deterministic structural-vs-textual consistency lint — it needs no
   semantic-entailment reasoning and can ship ahead of the modal-strength engine
   (REQ-0001).
+
+  In a composed graph a bare UID inside a borrowed item's prose names an item in
+  that item's own namespace, not a local item that happens to share the UID, and
+  the tool resolves it there. A finding on a borrowed item belongs to the source's
+  owner, so the tool offers a mode that reports local items only.
 rationale: |-
   Discovered 2026-07-26 in the orcid-mcp graph — SR-0004 (Least-privilege ORCID
   scopes) named NG-0004 and SR-0023 by UID in its text while its links block
@@ -25,6 +30,8 @@ normative: true
 links:
 - target: INT-0001
   type: derives_from
+- target: REQ-0001
+  type: relates
 attrs:
   origin: hybrid
   priority: should

@@ -9,6 +9,10 @@ text: |-
   a human can say which mechanisms are unnamed. A parent with universal language and
   exactly one child is the strongest case.
 
+  A child grounded to the parent by a verifying test is not a mechanism and is
+  not counted: a test guards the property, it does not realise it. The count is
+  of children that realise the property, whatever link type grounds them.
+
   Every gate passes in this shape. The parent has a child, the child has a test, the
   branch reports as covered, and the property is unguarded everywhere the named
   mechanism is not. Interrogating link strength does not reach it either, because
