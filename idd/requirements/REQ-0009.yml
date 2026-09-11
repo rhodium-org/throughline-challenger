@@ -1,6 +1,6 @@
 uid: REQ-0009
 type: requirement
-status: proposed
+status: ratified
 title: Flag a property stated with universal force that only one child instantiates
 text: |-
   The tool shall flag an item whose language is universal — always, every, never,
@@ -31,3 +31,5 @@ links:
 attrs:
   priority: should
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:1c26d4cac5eaabcd66ce5c771def234f292e5f769d2aa3b00f67b5b4849bef5f

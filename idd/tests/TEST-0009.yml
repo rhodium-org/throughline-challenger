@@ -1,6 +1,6 @@
 uid: TEST-0009
 type: test
-status: proposed
+status: ratified
 title: A universal parent with one narrow child is flagged; one whose children name
   several mechanisms is not
 text: |-
@@ -15,3 +15,5 @@ links:
   type: verifies
 attrs:
   origin: ai
+  ratified_by: Henry Grech-Cini
+  ratified_fingerprint: sha256:9f78533ca5c3229b800964d5ca6a63c299084a27abd0076a742891977285ca1a
