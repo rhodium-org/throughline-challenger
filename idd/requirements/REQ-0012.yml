@@ -23,6 +23,8 @@ normative: true
 links:
 - target: INT-0001
   type: derives_from
+- target: REQ-0008
+  type: relates
 attrs:
   priority: should
   origin: ai
