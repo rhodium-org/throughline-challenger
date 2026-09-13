@@ -8,7 +8,8 @@ text: |-
 
   Given an item whose text names a file whose name contains a real item's UID, such
   as tests/TEST-0001.test.ts, with no link to that item, the tool reports it as a
-  path mention and not as a citation. Given the same file name where a link to that
+  path mention and not as a citation, naming every item that carries the UID; in
+  a composed graph where a local and a borrowed item share it, both are named. Given the same file name where a link to that
   item exists, nothing is reported.
 normative: true
 links:
