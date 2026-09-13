@@ -43,5 +43,5 @@ attrs:
   origin: hybrid
   priority: should
   ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:2949cd2ab6ef78c018e5eb1ee0752e0a822bf39bf1cdfaaa11eb02f64f7b8421
+  ratified_fingerprint: sha256:7c438c5241ef34509c013f30eb5ea2c65178dcf8f1d4498a808370f03b572ebf
   ratified_backfilled: true
