@@ -16,5 +16,19 @@ links:
   type: verifies
 attrs:
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:e4a8295f440bea6f38b5d83416b6e6b5ca095452536ae624eb3bae41d68523bf
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:e4a8295f440bea6f38b5d83416b6e6b5ca095452536ae624eb3bae41d68523bf
+  content:
+    type: test
+    text: Given two requirements grounded to the same parent, one enumerating a set
+      of things and the other quantifying over a narrower or differently named class
+      of the same things, the pair is flagged together and neither is flagged alone.
+      Given that other items in the graph make those names distinct types, the flag
+      says so. Given siblings that quantify over the same things by the same names,
+      nothing is flagged. Given the same two requirements grounded to different parents,
+      nothing is flagged by this challenge.
+    normative: true
+    derived: false
+    attrs: {}
+  revision: 94768691d4992f113b879d824f7036f60374da3d

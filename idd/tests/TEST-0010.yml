@@ -12,5 +12,16 @@ links:
   type: verifies
 attrs:
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:a9904721d44aac197717c0103c1c374162f83d9d32ea08f65d840295430a59ac
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:a9904721d44aac197717c0103c1c374162f83d9d32ea08f65d840295430a59ac
+  content:
+    type: test
+    text: In a consumer graph that composes a source, link one local item to a source
+      item without a stamp and a second local item to a source item with a stamp.
+      The tool lists the first link and not the second. A link between two local
+      items is never listed, stamped or not.
+    normative: true
+    derived: false
+    attrs: {}
+  revision: 2d9ec168309670d37578fa97ac21f7cc29a9e260

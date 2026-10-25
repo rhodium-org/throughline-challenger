@@ -42,6 +42,39 @@ links:
 attrs:
   origin: hybrid
   priority: should
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:7c438c5241ef34509c013f30eb5ea2c65178dcf8f1d4498a808370f03b572ebf
-  ratified_backfilled: true
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:7c438c5241ef34509c013f30eb5ea2c65178dcf8f1d4498a808370f03b572ebf
+  backfilled: true
+  content:
+    type: requirement
+    text: |-
+      The tool shall scan every item's free-text fields (text, rationale) for
+      UID-shaped tokens — both bare local UIDs (e.g. SR-0004) and namespaced composed
+      references (e.g. asvs:SR-0194) — and flag any token that names a real item yet
+      has no corresponding entry in that item's links block. Such a token is a
+      dangling textual cross-reference — the prose asserts a dependency the graph
+      never records, so `tl check` (which inspects only the grounding edge, never the
+      prose) passes it silently. For each finding the tool reports the citing item,
+      the cited UID, and the sentence, so a human can either formalise the reference
+      (add the appropriate relates or grounding edge) or reword the prose. This is a
+      cheap, deterministic structural-vs-textual consistency lint — it needs no
+      semantic-entailment reasoning and can ship ahead of the modal-strength engine
+      (REQ-0001).
+
+      In a composed graph a bare UID inside a borrowed item's prose names an item in
+      that item's own namespace, not a local item that happens to share the UID, and
+      the tool resolves it there. A finding on a borrowed item belongs to the source's
+      owner, so the tool offers a mode that reports local items only.
+
+      A UID-shaped token that is part of a file path, preceded by a path separator or
+      followed by a file extension, names a file rather than citing an item. The tool
+      reports such a token apart from citations, as a path mention, naming every item
+      that carries that UID, local or borrowed, since a file may be named after either.
+      It does not count a path mention as a dangling citation. The human decides
+      whether a shared file is a relationship worth an edge; the tool does not.
+    normative: true
+    derived: false
+    attrs:
+      priority: should
+  revision: 2ec754809dfeda8f5851785efc1ea749aed31b9f

@@ -14,5 +14,18 @@ links:
   type: verifies
 attrs:
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:3df84f01144e141bdb83f1c4ef6cfee0c4532534ea6501e14dbb05a2bafe7efa
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:3df84f01144e141bdb83f1c4ef6cfee0c4532534ea6501e14dbb05a2bafe7efa
+  content:
+    type: test
+    text: In a consumer graph pinned to a source, name one type and one link type.
+      A borrowed item of that type with no incoming local link of that link type
+      is listed. A borrowed item with one such link is not. A borrowed item of another
+      type is not listed however many links it lacks. A borrowed item linked only
+      by a local non-goal with relates is not listed when relates is among the link
+      types named.
+    normative: true
+    derived: false
+    attrs: {}
+  revision: 2d9ec168309670d37578fa97ac21f7cc29a9e260

@@ -17,5 +17,21 @@ links:
   type: verifies
 attrs:
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:c855feeae9a1a7a995c9c73c4f83e2626bcb17836abc3b6405d4a3ff2f7cd818
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:c855feeae9a1a7a995c9c73c4f83e2626bcb17836abc3b6405d4a3ff2f7cd818
+  content:
+    type: test
+    text: 'Given a graph declaring a link type whose recorded meaning is replacement,
+      under any name: an item in a live status carrying that link is surfaced as
+      a question naming both ends and the two answers, retire the source or withdraw
+      the link. The same item in the graph''s tombstone or rejected status is not
+      surfaced. An item carrying a link whose recorded meaning is refinement or relation
+      is not surfaced whatever the type is called. A retired item whose replacement
+      is itself not live is surfaced. A graph whose link type has no recorded meaning
+      is asked for one before anything is judged, and the answer is recorded so it
+      is not asked again.'
+    normative: true
+    derived: false
+    attrs: {}
+  revision: 30da1a81e75845c4dd34f900068c24fcea7453b2

@@ -16,5 +16,20 @@ links:
   type: verifies
 attrs:
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:99c59f91fe7da1e074ed70fa05f7a426a35bd73c7016a2a010bcf319c501d9dc
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:99c59f91fe7da1e074ed70fa05f7a426a35bd73c7016a2a010bcf319c501d9dc
+  content:
+    type: test
+    text: Given a project declaring how each requirement is verified, the report
+      groups the distribution by grounding branch and not by item. A branch whose
+      requirements are all settled by human inspection is flagged. A branch holding
+      requirements of two kinds whose automated checks all sit on one kind is flagged
+      naming the unchecked kind, even though every requirement in the branch is covered
+      by the per-item rule. A branch with an automated check on each kind is not
+      flagged. A project declaring no verification attribute produces no report and
+      says why.
+    normative: true
+    derived: false
+    attrs: {}
+  revision: 94768691d4992f113b879d824f7036f60374da3d

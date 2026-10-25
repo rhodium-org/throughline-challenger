@@ -15,5 +15,19 @@ links:
   type: verifies
 attrs:
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:9de8d4462c7054c216ac8bb2a701702c657e2c5ca1ce760adf16b05ab62f33ba
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:9de8d4462c7054c216ac8bb2a701702c657e2c5ca1ce760adf16b05ab62f33ba
+  content:
+    type: test
+    text: Given two requirements grounded to the same parent, where an implementation
+      that satisfies the first exactly as its rationale describes would violate the
+      second, the tool asks whether the first's rationale justifies less than its
+      family requires, naming both items and the way the second would break. Given
+      siblings whose rationales are consistent with one another, nothing is asked.
+      The output is a question with the two answers open; the tool records no verdict
+      of its own and changes no item.
+    normative: true
+    derived: false
+    attrs: {}
+  revision: 94768691d4992f113b879d824f7036f60374da3d

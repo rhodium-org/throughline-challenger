@@ -28,5 +28,22 @@ links:
 attrs:
   priority: should
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:65c17544a205b4275650d6e902d991d28518cb16ff779031a3607ae19f895a0b
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:65c17544a205b4275650d6e902d991d28518cb16ff779031a3607ae19f895a0b
+  content:
+    type: requirement
+    text: 'Where a stamped link''s target has changed since the stamp was taken,
+      the tool shall show the local item, the target as it was when stamped and as
+      it now stands, and ask the human which of two things is true: the item still
+      holds against the new wording, or it does not. The tool shall not decide. If
+      the item still holds, the stamp is refreshed and the reason is recorded in
+      the item''s rationale. If it does not, the item is moved to the graph''s suspect
+      status, amended, and re-verified by the tests its verifies links name before
+      the stamp is refreshed. A stamp is refreshed by removing the link and adding
+      it again with a new stamp, never by adding a second link beside the first.'
+    normative: true
+    derived: false
+    attrs:
+      priority: should
+  revision: c46392baecb39ffd6b5fe356b57ff1641dbc41af

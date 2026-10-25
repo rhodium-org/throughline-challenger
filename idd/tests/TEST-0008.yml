@@ -15,5 +15,18 @@ links:
   type: verifies
 attrs:
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:1dc8874cc3537a8303080add0e6a45d248ff34d16ff329e51dc189d1ab0afbdd
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:1dc8874cc3537a8303080add0e6a45d248ff34d16ff329e51dc189d1ab0afbdd
+  content:
+    type: test
+    text: 'Given a requirement that states only the behaviour wanted, with no clause
+      saying which outcome would violate it, it appears in the review ordering marked
+      as lacking a negative case. Given a requirement carrying a clause of the form
+      ''and not'', ''never'', ''refuses'' or an explicit violating outcome, it does
+      not. The signal changes the ordering only: no run of the tool exits non-zero
+      on it, and it is absent from any output the tool offers as a gate.'
+    normative: true
+    derived: false
+    attrs: {}
+  revision: 94768691d4992f113b879d824f7036f60374da3d

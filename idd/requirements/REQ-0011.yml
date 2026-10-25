@@ -23,5 +23,19 @@ links:
 attrs:
   priority: should
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:ad8632cd982da08b3f54a11ff71e1491846bd9555a8c87ee69420957344932dc
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:ad8632cd982da08b3f54a11ff71e1491846bd9555a8c87ee69420957344932dc
+  content:
+    type: requirement
+    text: 'Where a graph composes a specification, the tool shall list every borrowed
+      item of the types the maintainer names as needing an implementer that has no
+      incoming link, of the link types the maintainer names, from a local item. Each
+      such item is a part of the specification the implementation is silent on. The
+      tool asks the human to choose: add a local item that implements it, or record
+      a non-goal that relates to it and says why it is out of scope. Silence is neither.'
+    normative: true
+    derived: false
+    attrs:
+      priority: should
+  revision: 2d9ec168309670d37578fa97ac21f7cc29a9e260

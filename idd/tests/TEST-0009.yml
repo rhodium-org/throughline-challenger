@@ -15,5 +15,18 @@ links:
   type: verifies
 attrs:
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:9f78533ca5c3229b800964d5ca6a63c299084a27abd0076a742891977285ca1a
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:9f78533ca5c3229b800964d5ca6a63c299084a27abd0076a742891977285ca1a
+  content:
+    type: test
+    text: |-
+      A parent whose text says a property holds always, with a single child addressing
+      one mechanism, is flagged, and the report shows the parent's claim beside that
+      child's subject. A parent with the same universal language whose children name
+      several distinct mechanisms is not flagged. A parent with no universal language is
+      not flagged however few children it has.
+    normative: true
+    derived: false
+    attrs: {}
+  revision: 073ee0be88a8fd233c19d0d3ceb3fd017ba4e9ff

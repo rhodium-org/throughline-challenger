@@ -19,5 +19,23 @@ links:
 attrs:
   priority: should
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:02f5946b163f85797c35f5904856f31f1d89738f4d6d1e8dfa2857a233c79a23
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:02f5946b163f85797c35f5904856f31f1d89738f4d6d1e8dfa2857a233c79a23
+  content:
+    type: requirement
+    text: |-
+      The tool shall surface, for a human to answer, whether an implementation satisfying
+      an item and the reason given for it would break a requirement grounded to the same
+      parent. A rationale narrower than the family it belongs to is not false and no
+      structural check can see it, so the tool asks the question rather than deciding it.
+
+      Observed in the silicon-exchange graph: SR-0039 asks for filter state in the query
+      string so a reader can copy the address and send someone the same view. Replacing
+      the history entry satisfies that completely and breaks SR-0040, which needs the
+      entry pushed.
+    normative: true
+    derived: false
+    attrs:
+      priority: should
+  revision: 6074e5028ed7593a4785ac55f5ceaab428b295ca

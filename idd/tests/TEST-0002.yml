@@ -17,5 +17,20 @@ links:
   type: verifies
 attrs:
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:9702030459ffc0e41e175a5dc139fd31c0db0480be5d8ba7a9e49415de9a21e0
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:9702030459ffc0e41e175a5dc139fd31c0db0480be5d8ba7a9e49415de9a21e0
+  content:
+    type: test
+    text: Given a parent granting a capability (may, can, able to) and a child requiring
+      it always (must, every, always), the child is flagged against the parent. Given
+      a child whose satisfies link names a standard clause that only permits what
+      the child mandates, the child is flagged against the clause. Given a parent
+      claiming a blanket property that no child realises and no linked clause requires,
+      the parent is flagged. Given a parent and child whose modal strengths match,
+      nothing is flagged. Every flag is a question naming both items and the two
+      strengths, and the graph on disk is byte for byte unchanged after the run.
+    normative: true
+    derived: false
+    attrs: {}
+  revision: 94768691d4992f113b879d824f7036f60374da3d

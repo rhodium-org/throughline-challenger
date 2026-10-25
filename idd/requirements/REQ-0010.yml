@@ -24,5 +24,20 @@ links:
 attrs:
   priority: should
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:c69fb8f08d4c41fd4b3f6945843f454bbf8575b2895ddd47ef93e639329892d4
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:c69fb8f08d4c41fd4b3f6945843f454bbf8575b2895ddd47ef93e639329892d4
+  content:
+    type: requirement
+    text: Where a graph composes another graph as a source, the tool shall list every
+      link from a local item into that source that carries no stamp of the target's
+      fingerprint. A link without a stamp cannot tell when its target changes, so
+      a moved source leaves the local item looking current. For each finding the
+      tool reports the local item, the target and the link type, so a human can stamp
+      the link or decide that the link does not depend on the target's wording. Confirming
+      a link records what was read; a stamp is that record.
+    normative: true
+    derived: false
+    attrs:
+      priority: should
+  revision: 2d9ec168309670d37578fa97ac21f7cc29a9e260

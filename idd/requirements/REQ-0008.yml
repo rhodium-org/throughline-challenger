@@ -39,5 +39,33 @@ links:
 attrs:
   priority: should
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:a2e18725e8661d234f39e290cfafaf372ce65b2bd3adcdfcf0f3f283cc5b12cf
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:a2e18725e8661d234f39e290cfafaf372ce65b2bd3adcdfcf0f3f283cc5b12cf
+  content:
+    type: requirement
+    text: 'The tool shall read what a graph''s link types mean, not only what they
+      are called, and treat any link whose meaning is that the target stands in for,
+      replaces, retires or makes irrelevant the source — superseded_by, replaced_by,
+      obsoleted_by, made_irrelevant_by, deprecated_by, or whatever the graph names
+      it — as a claim that the source''s life is over. Where such a link leaves an
+      item that is still live, in any status the graph does not bind to a tombstone,
+      rejection or retirement, the tool shall put the question to a human rather
+      than decide it: retire the source, or the link is wrong and the target does
+      not replace it after all. The meaning of a link type is taken from the graph''s
+      own declaration where it states one, and otherwise asked once of the maintainer
+      and recorded beside the type; it is never inferred from the name alone, because
+      a graph may call the relation anything and two graphs may use one name for
+      two meanings. The tool shall not flag an item whose link means something weaker,
+      such as refines or relates, however its name reads, and shall flag the mirror
+      case too: a retired item whose replacement is itself not live, which leaves
+      the reader with nothing to follow. Observed in throughline-editor on 6 September
+      2026: SR-0007 and SR-0035 carried superseded_by links to their successors for
+      weeks while still ratified, and were counted in every export, in the published
+      specification and in the citation-coverage gate; tl check was silent throughout,
+      because the links were well-formed.'
+    normative: true
+    derived: false
+    attrs:
+      priority: should
+  revision: 30da1a81e75845c4dd34f900068c24fcea7453b2

@@ -16,5 +16,20 @@ links:
   type: verifies
 attrs:
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:fdeed4844f8e1b5a487650efb4a1e7309f8ee492ef8c3faf8530526d15f26f15
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:fdeed4844f8e1b5a487650efb4a1e7309f8ee492ef8c3faf8530526d15f26f15
+  content:
+    type: test
+    text: Given a requirement whose predicate is a judgement no observation of the
+      running system settles, such as an appearance being designed rather than derived
+      or a colour used sparingly, it is flagged with the phrase that makes it so.
+      Given a requirement stated in terms an observation settles, such as a contrast
+      ratio or a response within a bound, nothing is flagged. Given a flagged requirement
+      that carries a written procedure for the human who settles it, the flag says
+      the procedure exists and asks only whether it is enough. The tool proposes
+      no restatement.
+    normative: true
+    derived: false
+    attrs: {}
+  revision: 94768691d4992f113b879d824f7036f60374da3d

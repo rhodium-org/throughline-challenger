@@ -22,5 +22,25 @@ links:
 attrs:
   priority: should
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:a84576c0b29ffb8374755bed9d8523524f6562dcfc7f757ac05f0bf80343f339
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:a84576c0b29ffb8374755bed9d8523524f6562dcfc7f757ac05f0bf80343f339
+  content:
+    type: requirement
+    text: |-
+      Where a project declares how each requirement is to be verified, the tool shall
+      report that distribution across each grounding branch rather than per item, and flag
+      a branch whose requirements are all settled by human inspection. It shall also flag a
+      branch whose automated checks all sit on one kind of requirement while another kind
+      goes unchecked, which a per-item coverage rule cannot see because the branch looks
+      covered.
+
+      Observed in the silicon-exchange graph: every requirement that failed acceptance sat
+      in a branch whose tests did not touch it, and three of five sat in branches with no
+      automated test at all. UR-0001 carried five tests, all on filtering and sorting
+      logic, and none on the two requirements about browser behaviour.
+    normative: true
+    derived: false
+    attrs:
+      priority: should
+  revision: 6074e5028ed7593a4785ac55f5ceaab428b295ca

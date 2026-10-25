@@ -14,5 +14,18 @@ links:
   type: verifies
 attrs:
   origin: ai
-  ratified_by: Henry Grech-Cini
-  ratified_fingerprint: sha256:6708cb4635c48b2e427bd48b778988aa50bba3a3f0b914d0bf1ff5e778121e06
+ratifications:
+- by: Henry Grech-Cini
+  fingerprint: sha256:6708cb4635c48b2e427bd48b778988aa50bba3a3f0b914d0bf1ff5e778121e06
+  content:
+    type: test
+    text: Pin a consumer graph to an older tag of a source, stamp a link to a source
+      item, then repin to a tag where that item's text changed. The tool shows the
+      local item with the target's stamped text beside its current text and asks
+      whether the item still holds. After the refresh the link exists once, with
+      the new stamp, and the composed check is clean. Repinning to a tag where the
+      target did not change shows nothing.
+    normative: true
+    derived: false
+    attrs: {}
+  revision: 2d9ec168309670d37578fa97ac21f7cc29a9e260
